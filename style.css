@@ -89,7 +89,7 @@ a:hover {
     transition-duration: 0.1s;
 }
 .icon {
-    width: 270px; /* Điều chỉnh chiều rộng */
+    width: 210px; /* Điều chỉnh chiều rộng */
     height: auto; /* Chiều cao tự động thích ứng */
     user-select: none ;
 }
