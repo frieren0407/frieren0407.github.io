@@ -11,8 +11,9 @@ body {
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-overflow-scrolling: touch;
-    background-image: url("media/backgroundd.jpg");
+    background-image: url("media/backgroundd.png");
     background-size: cover;
+    font-family: Montserrat, sans-serif; /* Thêm font-family */
 }
 .box {
     position: absolute;
@@ -23,7 +24,7 @@ body {
     transform: translate(-50%,-50%);
     background:rgb(255, 255, 255);
     width: 70%;
-    height: 80%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
