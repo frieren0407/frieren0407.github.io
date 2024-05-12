@@ -1,25 +1,77 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" type="page-icon" href="media/icon2.png">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/ca262bb4da.js" crossorigin="anonymous"></script>
     <title>alicia</title>
 </head>
+
 <body>
-<div class="box">
-    <div class="content">
-        <img class="icon" src="media/icon2.png">
-        <div class="name">niifuji</div>
-        <div class="subtitle">music + coding</div>
-        <ul class="links">
-            <li class="linkli"><a href="https://www.facebook.com/tquockhongsuy/" target="_blank">facebook</a></li>
-            <li class="linkli"><a href="https://github.com/frieren0407" target="_blank">github</a></li>
-            <li class="linkli"><a href="https://youtube.com/@frieren0407/" target="_blank">youtube</a></li>
-            <li><a href="mailto:tonquoc1412@gmail.com">contact</a></li>
-        </ul>
+    <div id="intro" class="intro">
+        <h1 class="logo-header">
+            <span class="logo">Wel</span> <span class="logo">come</span>
+        </h1>
     </div>
-</div>
+
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="media/videoplayback (2).mp4" type="video/mp4">
+        </video>
+        <div class="box">
+            <div class="content">
+                <img class="icon" src="media/icon2.png">
+
+                <div id="popup" class="popup">
+                    <p1>Currently learning for Information System and Machine learning at UIT<br>
+                        Making music for entertainment
+                    </p1>
+                </div>
+                <div class="name">niifuji</div>
+                <div class="subtitle">music + coding</div>
+                <ul class="links">
+                    <li class="linkli"><a href="https://www.facebook.com/tquockhongsuy/" target="_blank">facebook</a>
+                    </li>
+                    <li class="linkli"><a href="https://github.com/frieren0407" target="_blank">github</a></li>
+                    <li class="linkli"><a href="https://youtube.com/@frieren0407/" target="_blank">youtube</a></li>
+                    <li><a href="mailto:tonquoc1412@gmail.com">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let intro = document.querySelector('.intro');
+        let logo = document.querySelector('.logo-header');
+        let logoSpan = document.querySelectorAll('.logo');
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                logoSpan.forEach((span, idx) => {
+                    setTimeout(() => {
+                        span.classList.add('active');
+                    }, (idx + 1) * 400)
+                });
+                setTimeout(() => {
+                    logoSpan.forEach((span, idx) => {
+                        setTimeout(() => {
+                            span.classList.remove('active');
+                            span.classList.add('fade');
+                        }, (idx + 1) * 50)
+                    });
+                }, 2000);
+                setTimeout(() => {
+                    intro.style.top = '-100vh';
+                }, 2300);
+
+            })
+        })
+
+    </script>
 
 </html>

@@ -11,18 +11,19 @@ body {
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-overflow-scrolling: touch;
-    background-image: url("media/backgroundd.png");
     background-size: cover;
-    font-family: Montserrat, sans-serif; /* Thêm font-family */
+    font-family: Montserrat, sans-serif;
+    /* Thêm font-family */
 }
+
 .box {
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    background:rgb(255, 255, 255);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.345);
     width: 70%;
     height: 70%;
     display: flex;
@@ -32,19 +33,25 @@ body {
     border-radius: 20px;
     box-shadow: 0px 0px 10px 0px #595959;
 }
+
 .content {
     display: flex;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+
 }
+
 .name {
+    margin: 30px 0px 0px 0px;
     font-size: 56px;
     font-family: Montserrat, sans-serif;
     font-weight: 700;
     letter-spacing: -3px;
 }
+
 .subtitle {
+    margin: 10px 0px 0px 0px;
     margin-left: 10px;
     flex-wrap: wrap;
     font-size: 20px;
@@ -52,6 +59,7 @@ body {
     font-weight: 600;
     text-align: center;
 }
+
 .links {
     padding-left: 0px;
     margin: 30px 0px 0px 0px;
@@ -66,12 +74,15 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
 }
+
 li {
     margin: 8px;
 }
+
 a {
     text-decoration: none;
 }
+
 a:link {
     color: #1F1F1F;
     -webkit-transition: color 0.2s;
@@ -79,9 +90,11 @@ a:link {
     -o-transition: color 0.2s;
     transition-duration: color 0.2s;
 }
+
 a:visited {
     color: #1F1F1F;
 }
+
 a:hover {
     color: #CB83C7;
     -webkit-transition: 0.1s;
@@ -89,8 +102,82 @@ a:hover {
     -o-transition: 0.1s;
     transition-duration: 0.1s;
 }
+
 .icon {
-    width: 210px; /* Điều chỉnh chiều rộng */
-    height: auto; /* Chiều cao tự động thích ứng */
-    user-select: none ;
+    width: 210px;
+    /* Điều chỉnh chiều rộng */
+    height: auto;
+    /* Chiều cao tự động thích ứng */
+    user-select: none;
+    border-radius: 30%;
+    -webkit-transition: 0.2s;
 }
+
+/* ... (các kiểu CSS khác) ... */
+.popup {
+    text-align: center;
+    margin: 30px 0px 0px 0px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* Các kiểu CSS khác của bạn */
+
+.intro {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    transition: 1s;
+    height: 100vh;
+}
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1F1F1F;
+    font-size: 50px;
+    font-family: Nunito, sans-serif;
+    gap: 0px;
+}
+
+.logo {
+    display: inline-block;
+    opacity: 0;
+
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
